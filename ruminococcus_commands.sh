@@ -21,3 +21,8 @@ raxmlHPC -s ruminococcus_muscle.fasta -n ruminococcus_muscle -m GTRGAMMA -f a -x
 # Set node labels to bootstrap
 # Re-size, export PDF
 
+# We need to make a BLAST database before searching for hits
+makeblastdb -dbtype nucl -in ruminococcus.fasta
+
+# Now we can BLAST the R. gnavus sequence into all the Ruminococcus 16S sequences
+blastn -query ruminococcus_gnavus.fasta -db ruminococcus.fasta -outfmt 7 > ruminococcus_gnavus_blast.tsv
