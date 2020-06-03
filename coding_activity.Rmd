@@ -1,0 +1,70 @@
+---
+output: html_document
+---
+
+```{r}
+library(tidyverse)
+```
+
+```{r}
+rumino <- read_csv("ruminococcus_gnavus_results.csv")
+```
+
+```{r}
+rumino %>%
+  count(query_id)
+```
+
+```{r}
+rumino %>%
+  count(subject_id, subject_species)
+```
+
+
+```{r}
+rumino %>%
+  group_by(subject_group) %>%
+  summarize(mean_pct_identity = mean(pct_identity))
+```
+
+```{r}
+rumino %>%
+  ggplot() +
+  geom_boxplot(aes(y=pct_identity, x=subject_group))
+```
+
+```{r}
+rumino %>%
+  ggplot() +
+  geom_boxplot(aes(y=pct_identity, x=subject_group)) +
+  labs(x="Species group", y="Percent identity to R. gnavus")
+```
+
+```{r}
+rumino %>%
+  ggplot() +
+  geom_boxplot(aes(y=pct_identity, x=subject_group)) +
+  labs(x="Species group", y="Percent identity to R. gnavus") +
+  theme_bw()
+```
+
+```{r}
+rumino %>%
+  ggplot() +
+  geom_point(aes(y=pct_identity, x=bit_score))
+```
+
+```{r}
+rumino %>%
+  ggplot() +
+  geom_point(aes(y=pct_identity, x=bit_score, color=subject_group))
+```
+
+```{r}
+rumino %>%
+  ggplot() +
+  geom_point(aes(y=pct_identity, x=bit_score, color=subject_group)) +
+  scale_color_brewer(palette = "Set1") +
+  labs(y="Percent identity", x="BLAST bit score", color="Species group") +
+  theme_bw()
+```

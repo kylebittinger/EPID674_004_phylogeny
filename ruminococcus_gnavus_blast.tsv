@@ -1,0 +1,16 @@
+# BLASTN 2.2.31+
+# Query: Ruminococcus_gnavus_query
+# Database: ruminococcus.fasta
+# Fields: query id, subject id, % identity, alignment length, mismatches, gap opens, q. start, q. end, s. start, s. end, evalue, bit score
+# 10 hits found
+Ruminococcus_gnavus_query	X94967	100.00	1481	0	0	1	1481	1	1481	0.0	2724
+Ruminococcus_gnavus_query	FJ611794	94.83	1411	60	13	26	1430	1	1404	0.0	2194
+Ruminococcus_gnavus_query	EF529620	93.06	1455	96	5	1	1451	3	1456	0.0	2148
+Ruminococcus_gnavus_query	L76604	93.99	1414	77	8	1	1410	8	1417	0.0	2146
+Ruminococcus_gnavus_query	L76602	93.52	1405	82	9	11	1410	1	1401	0.0	2100
+Ruminococcus_gnavus_query	L76596	84.46	1326	167	32	86	1395	53	1355	0.0	1277
+Ruminococcus_gnavus_query	AJ515913	84.01	1351	184	26	86	1424	37	1367	0.0	1275
+Ruminococcus_gnavus_query	L76598	84.01	1338	184	26	86	1411	88	1407	0.0	1264
+Ruminococcus_gnavus_query	L76603	83.99	1324	183	23	86	1397	68	1374	0.0	1254
+Ruminococcus_gnavus_query	L76600	83.10	1331	193	29	86	1400	55	1369	0.0	1201
+# BLAST processed 1 queries
